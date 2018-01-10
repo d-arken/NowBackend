@@ -1,0 +1,18 @@
+O arquivo que está gerando o erro já foi adicionado ao git, eu corrigi mas como o vendor participa do gitignore nao ficou no repositório. Já foi adcionado, caso tenha problemas é o arquivo \vendor\patricktalmadge\bootstrapper\src\Bootstrapper\Form.php
+
+As alterações, na linha 276, o metodo select().
+
+ public function select(
+        $name,
+        $list = array(),
+        $selected = null,
+        array $selectAttributes = array(),
+        array $optionsAttributes = array()
+
+    ) {
+        $attributes['class'] = isset($attributes['class']) ?
+            self::FORM_CONTROL . ' ' . $attributes['class'] :
+            self::FORM_CONTROL;
+
+        return parent::select($name, $list, $selected, $selectAttributes, $optionsAttributes);
+    }
